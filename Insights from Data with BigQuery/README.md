@@ -1,4 +1,4 @@
-##TASK 1
+# TASK 1
 SELECT
   SUM(cumulative_confirmed) AS total_cases_worldwide
 FROM
@@ -6,7 +6,7 @@ FROM
 WHERE
   date = "2020-04-15"
   
-#TASK 2
+# TASK 2
   SELECT
     COUNT(*) AS count_of_states
 FROM (
@@ -24,7 +24,7 @@ GROUP BY
 )
 WHERE death_count > 100
 
-#TASK 3
+# TASK 3
 SELECT subregion1_name as state, sum(cumulative_confirmed) as total_confirmed_cases 
 FROM `bigquery-public-data.covid19_open_data.covid19_open_data` 
 where country_name="United States of America" and date='2020-04-10' and subregion1_name is NOT NULL
@@ -32,12 +32,12 @@ group by subregion1_name
 having total_confirmed_cases > 1000
 order by total_confirmed_cases desc
 
-#TASK 4
+# TASK 4
 SELECT SUM(cumulative_confirmed) AS total_confirmed_cases, SUM(cumulative_deceased) AS total_deaths, (SUM(cumulative_deceased)/SUM(cumulative_confirmed))*100 AS case_fatality_ratio
 FROM `bigquery-public-data.covid19_open_data.covid19_open_data`
 WHERE country_name="Italy" AND date BETWEEN "2020-04-01" AND "2020-04-30"
 
-#TASK 5
+# TASK 5
 SELECT
  date
 FROM
@@ -48,7 +48,7 @@ WHERE
 ORDER BY date
 LIMIT 1
 
-#TASK 6
+# TASK 6
 WITH india_cases_by_date AS (
   SELECT
     date,
@@ -79,7 +79,7 @@ FROM
 WHERE
   net_new_cases = 0
   
-  #TASK 7
+# TASK 7
   WITH us_cases_by_date AS (
   SELECT
     date,
@@ -113,7 +113,7 @@ FROM
 WHERE
   percentage_increase > 10
   
-  #TASK 8
+ # TASK 8
   WITH cases_by_country AS (
   SELECT
     country_name AS country,
@@ -143,7 +143,7 @@ WHERE
 ORDER BY recovery_rate DESC
 LIMIT 10
 
-#TASK 9
+# TASK 9
 WITH
   france_cases AS (
   SELECT
