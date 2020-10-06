@@ -1,4 +1,4 @@
-#TASK 1
+##TASK 1
 SELECT
   SUM(cumulative_confirmed) AS total_cases_worldwide
 FROM
