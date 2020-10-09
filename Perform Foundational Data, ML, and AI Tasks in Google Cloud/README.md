@@ -22,7 +22,7 @@
 - In the Cloud Console, click on Navigation Menu > Dataflow.
 - Click CREATE JOB FROM TEMPLATE.
 - In Create job from template, give an arbitrary job name.
-- From the dropdown under Dataflow template, select Text Files on Cloud Storage Pub/Sub under “Process Data in Bulk (batch)”. (DO NOT select the item under “Process Data Continuously (stream)”).
+- From the dropdown under Dataflow template, select Text Files on Cloud Storage to BigQuery under “Process Data in Bulk (batch)”. (DO NOT select the item under “Process Data Continuously (stream)”).
   ![Step5](https://chriskyfung.github.io/images/posts/qwiklabs/qwiklab-gsp323-task1-data-flow-required-parameter.webp)
 - RUN JOB
 
