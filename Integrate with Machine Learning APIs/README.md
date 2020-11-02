@@ -1,15 +1,15 @@
 # Task 1: Configure a service account to access the Machine Learning APIs, BigQuery, and Cloud Storage
 - Create a new service account that provides credentials for the script.
-      export SANAME=challenge
-      gcloud iam service-accounts create $SANAME
-      1) gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$SANAME@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/bigquery.admin
-      2) gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$SANAME@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/storage.admin
+- export SANAME=challenge
+- gcloud iam service-accounts create $SANAME
+- 1) gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID <br> --member=serviceAccount:$SANAME@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/bigquery.admin
+- 2) gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$SANAME@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/storage.admin
 # Task 2: Create and download a credential file for your Service Account
       1) gcloud iam service-accounts keys create sa-key.json --iam-account $SANAME@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com
       2) export GOOGLE_APPLICATION_CREDENTIALS=${PWD}/sa-key.json
       3) gsutil cp gs://$DEVSHELL_PROJECT_ID/analyze-images.py .
 # Task 3 & 4: Modify the Python script to extract text from image files
-Open gcloud shell editor and replace the file analyze-images.py with the following code below
+Open gcloud shell editor and replace the file analyze-images.py with the following code below Or If this file doesn't work then use Analyze-Image[https://github.com/Sonichigo/Qwiklab/blob/main/Integrate%20with%20Machine%20Learning%20APIs/analyze-images.py]
 
       #DONT CHANGE ANYTHING
       #Dataset: image_classification_dataset
