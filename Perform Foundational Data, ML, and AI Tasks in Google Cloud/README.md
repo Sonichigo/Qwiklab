@@ -10,6 +10,22 @@
 - Copy gs://cloud-training/gsp323/lab.csv to Select file from GCS bucket.
 - Enter customers to “Table name” in the Destination section.
 - Enable Edit as text and copy the JSON data from the lab.schema file to the textarea in the Schema section.
+```
+    [
+        {"type":"STRING","name":"guid"},
+        {"type":"BOOLEAN","name":"isActive"},
+        {"type":"STRING","name":"firstname"},
+        {"type":"STRING","name":"surname"},
+        {"type":"STRING","name":"company"},
+        {"type":"STRING","name":"email"},
+        {"type":"STRING","name":"phone"},
+        {"type":"STRING","name":"address"},
+        {"type":"STRING","name":"about"},
+        {"type":"TIMESTAMP","name":"registered"},
+        {"type":"FLOAT","name":"latitude"},
+        {"type":"FLOAT","name":"longitude"}
+    ]
+```
 - Click Create table.
 
 ## Create a Cloud Storage bucket
